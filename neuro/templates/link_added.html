@@ -1,0 +1,24 @@
+
+{% extends "main.html" %}
+{% block content %}
+
+  <section class="section has-text-centered" style="background-color: coral;">
+    <div class="container">
+            <div class="field">
+                <label class="label">Twój link </label>
+                <div class="control">
+                    <input class="input has-text-centered" type="text" name="original_url" value="{{ original_url }}"style="margin-top: 10px;">
+                </div>
+            </div>
+            <div class="field">
+                    <label class="label">Specjalny link XD </label>
+                    <div class="control">
+                        <input class="input has-text-centered" id="linker" type="text" name="original_url" value="{{ url_for('LinkConvBasic.redirect_to_url', short_url=new_link, _external=True) }}" style="margin-top: 10px;">
+                    </div>
+                    <a href="/"><button class="button is-black" style="margin-top: 10vh;">Powrót do strony głównej</button></a>
+            </div>
+    </div>
+  </section>
+
+
+{% endblock content %}

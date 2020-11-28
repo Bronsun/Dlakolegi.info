@@ -1,0 +1,39 @@
+{% extends "main.html"%}
+{% block content %}
+
+<table class="table">
+    <thead>
+      <tr>
+        <th><abbr title="Position">Numer</abbr></th>
+        <th>Adresy URL</th>
+        <th><abbr title="Played">Skrócone adresy URL</abbr></th>
+        <th><abbr title="Won">Ilość wejść </abbr></th>
+       
+      </tr>
+    </thead>
+    <tfoot>
+      <tr>
+        <th><abbr title="Position">Numer</abbr></th>
+        <th>Adresy URL</th>
+        <th><abbr title="Played">Skrócone adresy URL</abbr></th>
+        <th><abbr title="Won">Ilość wejść </abbr></th>
+        
+      </tr>
+    </tfoot>
+    <tbody>
+       {% for linkers in users %}
+      <tr>
+        <th>{{linkers.id}}</th>
+      
+        <td><a href="{{linkers.original_url}}">{{linkers.original_url}}</a></td>
+        
+       
+        <td><a href="{{linkers.short_url}}">{{linkers.short_url}}</a></td>
+        <
+      </tr> 
+      {%endfor%}
+      
+    </tbody>
+  </table>
+
+{%endblock content%}
